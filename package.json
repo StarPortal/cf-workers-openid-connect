@@ -1,0 +1,22 @@
+{
+  "name": "@starportal/cf-workers-openid-connect",
+  "version": "0.1.0",
+  "description": "Provide OpenID connect for Cloudflare Workers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "author": "Aotokitsuruya<contact@aotoki.me>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.16.0"
+  },
+  "dependencies": {
+    "rfc4648": "^1.5.2"
+  }
+}

@@ -1,0 +1,11 @@
+# General
+.DS_Store
+
+# Thumbnails
+._*
+
+# Node
+node_modules/
+
+# Workers
+dist/
