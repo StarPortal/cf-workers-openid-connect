@@ -3,6 +3,12 @@ Cloudflare Workers OpenID Connect
 
 This package implements the minimum required logic to let Cloudflare Workers / Pages can support OpenID Connect authentication.
 
+## Installation
+
+```bash
+npm install @starportal/cf-workers-openid-connect
+```
+
 ## Usage
 
 ### buildAuthenticator
@@ -11,13 +17,16 @@ The factory to create `Authenticator` object
 
 Will load client options from env
 
-| Environment name         | Description                                   |
-|--------------------------|-----------------------------------------------|
-| OIDC_ISSUER              | The issuer url e.g. `http://user.example.com` |
-| OIDC_DISCOVERY_CACHE_TTL | The `fetch` cache when use discovery endpoint |
-| OIDC_CLIENT_ID           | The application client ID                     |
-| OIDC_CLIENT_SECRET       | The application secret                        |
-| OIDC_CLIENT_REDIRECT_URI | The callback url to redirect back             |
+| Environment name                     | Description                                   |
+|--------------------------------------|-----------------------------------------------|
+| `OIDC_ISSUER`                        | The issuer url e.g. `http://user.example.com` |
+| `OIDC_DISCOVERY_CACHE_TTL`           | The `fetch` cache when use discovery endpoint |
+| `OIDC_CLIENT_ID`                     | The application client ID                     |
+| `OIDC_CLIENT_SECRET`                 | The application secret                        |
+| `OIDC_CLIENT_REDIRECT_URI`           | The callback url to redirect back             |
+| `OIDC_CLIENT_AUTHORIZATION_ENDPOINT` | The authorization endpoint                    |
+| `OIDC_CLIENT_TOKEN_ENDPOINT`         | The endpoint to exchange code                 |
+| `OIDC_CLIENT_KEYS_ENDPOINT`          | The endpoint to get JWKS to verify ID token   |
 
 ## Examples
 
