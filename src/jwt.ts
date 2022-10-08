@@ -25,11 +25,11 @@ export class JWT {
   }
 
   get header(): Header & any {
-    return JSON.parse(atob(this.parts[0]))
+    return JSON.parse(new TextDecoder().decode(base64url.parse(this.parts[0], { loose: true })))
   }
 
   get payload(): Payload & any {
-    return JSON.parse(atob(this.parts[1]))
+    return JSON.parse(new TextDecoder().decode(base64url.parse(this.parts[1], { loose: true })))
   }
 
   get signature(): ArrayBuffer {
