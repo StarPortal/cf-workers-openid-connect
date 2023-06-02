@@ -14,7 +14,7 @@
   "author": "Aotokitsuruya<contact@aotoki.me>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.16.0"
+    "@cloudflare/workers-types": "^4.20230518.0"
   },
   "dependencies": {
     "rfc4648": "^1.5.2"
